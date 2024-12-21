@@ -7,7 +7,7 @@ from src.hipotesis import hipotesis_1, hipotesis_2
 #Carga el DataFrame
 @st.cache_data
 def load_data():
-    return pd.read_csv("data\Dry_Bean_Dataset.csv")  # Cambiar a la ruta de tu archivo
+    return pd.read_csv("data/Dry_Bean_Dataset.csv")  # Cambiar a la ruta de tu archivo
 
 # Cargar datos
 df = load_data()
