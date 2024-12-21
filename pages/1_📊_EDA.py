@@ -13,6 +13,18 @@ st.title("Análisis Exploratorio de Datos (EDA)")
 # Cargar datos
 df = load_data()
 
+# Información básica del conjunto de datos
+st.header("Aspectos Básicos del Conjunto de Datos")
+with st.container():
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.metric(label="Número de Filas", value=df.shape[0], border=True)
+    with col2:
+        st.metric(label="Número de Columnas", value=df.shape[1], border=True)
+    with col3:
+        missing_values = df.isnull().any().sum()
+        st.metric(label="Valores Perdidos", value="Sí" if missing_values > 0 else "No", border=True)
+
 # Mostrar gráficos
 st.header("Mapa de Calor de Correlaciones")
 heatmap_fig = plot_heatmap(df)
