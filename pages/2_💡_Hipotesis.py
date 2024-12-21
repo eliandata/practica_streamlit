@@ -22,5 +22,6 @@ st.plotly_chart(fig_box, use_container_width=True)
 
 # Hipótesis 2
 st.header("Hipótesis 2: Distribución del Área por Clase")
-fig_hist = hipotesis_2(df)
-st.plotly_chart(fig_hist, use_container_width=True)
+fig_scatter, fig_corr = hipotesis_2(df)
+st.plotly_chart(fig_scatter, use_container_width=True)
+st.plotly_chart(fig_corr, use_container_width=True)

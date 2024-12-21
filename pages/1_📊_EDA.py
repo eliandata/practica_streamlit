@@ -34,9 +34,8 @@ with col2:
 
 # Gráfico de dispersión interactivo
 st.header("Gráfico de Dispersión Interactivo")
-class_column = st.selectbox("Selecciona la columna de Clase:", df['Class'].unique())
 x_column = st.selectbox("Selecciona la columna X:", df.columns)
 y_column = st.selectbox("Selecciona la columna Y:", df.columns)
 
-scatter_fig = plot_scatter(df, class_column, x_column, y_column)
+scatter_fig = plot_scatter(df, x_column, y_column)
 st.plotly_chart(scatter_fig)

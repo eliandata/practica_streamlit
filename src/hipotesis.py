@@ -39,4 +39,22 @@ def hipotesis_2(data):
         labels={'Compactness': 'Compactness', 'AspectRation': 'Aspect Ratio'},
         symbol="Class"  # Opcional, símbolos para diferenciar
     )
-    return fig_scatter
+
+    #calcular coeficiente de relacion para cada clase
+    # Calcular la correlación entre Compactness y Aspect_Ration para cada valor de 'Class'
+    correlation_data = data.groupby('Class').apply(
+        lambda group: group['Compactness'].corr(group['AspectRation'])
+    ).reset_index(name='Correlation')
+
+    # Crear el gráfico de barras
+    fig_corr = px.bar(
+        correlation_data,
+        x='Class',
+        y='Correlation',
+        color='Class',
+        title="Correlación entre Compactness y Aspect Ratio por Clase",
+        labels={'Correlation': 'Correlación'},
+        text='Correlation'  # Muestra el valor de la correlación sobre las barras
+    )
+
+    return fig_scatter, fig_corr

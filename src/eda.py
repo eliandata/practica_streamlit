@@ -51,7 +51,7 @@ def plot_avg_minor_axis_length(df):
     )
     return fig
 
-def plot_scatter(df, class_column, x_column, y_column):
+def plot_scatter(df, x_column, y_column):
     """Genera un gráfico de dispersión basado en las selecciones del usuario."""
     fig = px.scatter(
         df,
