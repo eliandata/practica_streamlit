@@ -47,6 +47,6 @@ streamlit run Inicio.py
 ```bash
 deactivate
 ```
-
-¡Gracias por usar esta aplicación! 🎉
+---
+## ¡Gracias por usar esta aplicación! 🎉
 
