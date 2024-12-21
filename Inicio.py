@@ -11,12 +11,12 @@ st.markdown("""
 Este proyecto incluye las siguientes páginas:
 """)
 
-# Sección de páginas con título y GIF
+# Sección de páginas con título y imagenes
 col1, col2 = st.columns([2, 2])
 
 with col1:
     st.markdown('<div class="column">', unsafe_allow_html=True)
-    st.image("utils/exploration.png", width=250)  # Reemplaza con tu gif para EDA
+    st.image("utils/exploration.png", width=250) 
     st.markdown('</div>', unsafe_allow_html=True)
 
 with col2:
@@ -27,7 +27,7 @@ col3, col4 = st.columns([2, 2])
 
 with col3:
     st.markdown('<div class="column">', unsafe_allow_html=True)
-    st.image("utils/idea.png", width=250)  # Reemplaza con tu gif para Hipótesis
+    st.image("utils/idea.png", width=250)  
     st.markdown('</div>', unsafe_allow_html=True)
 
 with col4:
@@ -38,7 +38,7 @@ col5, col6 = st.columns([2, 2])
 
 with col5:
     st.markdown('<div class="column">', unsafe_allow_html=True)
-    st.image("utils\machine-learning (1).png", width=250)  # Reemplaza con tu gif para el Modelo
+    st.image("utils\machine-learning.png", width=250)  
     st.markdown('</div>', unsafe_allow_html=True)
 
 with col6:

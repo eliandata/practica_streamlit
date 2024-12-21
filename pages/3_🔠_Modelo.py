@@ -52,7 +52,7 @@ try:
         recall = recall_score(y_test, y_pred, average='weighted')
 
         # Mostrar métricas utilizando st.metric
-        st.markdown("<h2 style='color:blue;'>Métricas del Modelo Entrenado</h2>", unsafe_allow_html=True)
+        st.title("Métricas del Modelo Entrenado")
         col1, col2, col3, col4 = st.columns(4)
         col1.metric("Accuracy", f"{accuracy:.2f}", border= True)
         col2.metric("F1 Score", f"{f1:.2f}", border= True)
@@ -65,7 +65,7 @@ except Exception as e:
     st.error(f"Ocurrió un error al procesar el archivo de entrenamiento: {e}")
 
 # Sección para realizar predicciones
-st.markdown("<h2 style='color:blue;'>Realizar predicciones</h2>", unsafe_allow_html=True)
+st.title("Realizar predicciones")
 prediction_file = st.file_uploader("Sube un archivo CSV para realizar predicciones", type=["csv"])
 
 if prediction_file is not None and model is not None:
