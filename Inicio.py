@@ -1,4 +1,5 @@
 import streamlit as st
+import os
 
 # Configuración inicial
 st.set_page_config(layout="wide")
@@ -38,7 +39,12 @@ col5, col6 = st.columns([2, 2])
 
 with col5:
     st.markdown('<div class="column">', unsafe_allow_html=True)
-    st.image("çutils\machinelearning.png", width=200)  
+    # Asegúrate de que la ruta esté bien escrita
+    ruta_imagen = "utils/machinelearning.png"
+    if os.path.exists(ruta_imagen):
+        st.image(ruta_imagen, width=250)
+    else:
+        st.error(f"No se encontró el archivo en la ruta: {ruta_imagen}")  
     st.markdown('</div>', unsafe_allow_html=True)
 
 with col6:
