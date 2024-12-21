@@ -5,7 +5,7 @@ from src.eda import plot_heatmap, plot_class_count, plot_avg_major_axis_length, 
 # Carga el DataFrame
 @st.cache_data
 def load_data():
-    return pd.read_csv("data\Dry_Bean_Dataset.csv")  # Cambiar a la ruta de tu archivo
+    return pd.read_csv("data\Dry_Bean_Dataset.csv")  
 
 # Configuración de la página
 st.title("Análisis Exploratorio de Datos (EDA)")

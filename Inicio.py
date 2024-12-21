@@ -38,7 +38,7 @@ col5, col6 = st.columns([2, 2])
 
 with col5:
     st.markdown('<div class="column">', unsafe_allow_html=True)
-    st.image("utils\machinelearning.png", width=250)  
+    st.image("utils\machinelearning.png", width=200)  
     st.markdown('</div>', unsafe_allow_html=True)
 
 with col6:
